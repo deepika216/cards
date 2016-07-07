@@ -13,6 +13,9 @@ public class Cards {
 		
 		return "123456789TJQK"[sequence % 13];
 	}
+	public getSuit() {
+		return "CDHS"[sequence / 13];
+	}
 	
 } 
 
