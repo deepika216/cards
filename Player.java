@@ -1,9 +1,15 @@
 public class Player {
 	String playername;
-	int cardswithplayer;
-	public Player (String name, int numberofcards) {
+	ArrayList<Integer> cardswithplayer;
+	int score;
+	public Player (String name) {
 		this.playername = name;
-		this.cardswithplayer = numberofcards;
+		this.score = 0;
+		for(int i = 1; i < 14; i++) {
+			cardswithplayer.add(i);
+		}
+		
+		
 	}
 	
 }
