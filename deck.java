@@ -26,10 +26,17 @@ public deck() {
    diamond[i] = diamond[rand];
    diamond[rand] = temp;
   }
-   cardused++;
-    return diamond[cardused -1];
+   cardused = 0;
  }
+   public int cardsleft() {
+return diamond.length - cardused;
  }
+  public card dealcard() {
+   if(cardused == diamond.length) 
+    throw new IllegalStateException("no cards are found in the deck");
+cardused++;
+ return diamond[cardused - 1];
+}
 
  public static void main(String[] args) {
    deck d = new deck();
